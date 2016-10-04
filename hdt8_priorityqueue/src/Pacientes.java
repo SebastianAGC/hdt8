@@ -1,4 +1,3 @@
-package org.uvg.bean;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -54,7 +53,7 @@ public class Pacientes implements Comparable<Pacientes>{
 
     @Override
     public String toString() {
-        return "Pacientes{" + "name=" + name + ", sintoma=" + sintoma + ", codigo=" + codigo + '}';
+        return name + ", " + sintoma + ", " + codigo;
     }
 
     @Override
