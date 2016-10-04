@@ -5,8 +5,6 @@
  * Autores:
  * 		Davis Alvarez -15842
  * 		Sevastian Galindo - 15452
- * 
- * GIT: https://github.com/SebastianAGC/hdt8.git
 */	
 
 import java.io.BufferedReader;
@@ -22,8 +20,8 @@ public class Principal {
     static VectorHeap<Pacientes> vector = new VectorHeap<Pacientes>();
     static String laCadena = "";
     
-            //Método en donde se crea el diccionario leyendo el contendido del archivo txt
-    public static void crearArray(){
+    //Método en donde se crea el vector leyendo el contendido del archivo txt
+    public static void crearVector(){
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\pacientes.txt"));
@@ -51,10 +49,9 @@ public class Principal {
     
     
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-                crearArray();
-
+                crearVector();
+                //Impresion de las listas de los pacientes al ingresar y de los pacientes como deben de sera atendidos.
                 System.out.println("Los pacientes ingresaron de esta manera: ");
                 System.out.println(laCadena + "\n");      
                 System.out.println("Los pacientes deben ser atendidos de la siguiente manera: \n");

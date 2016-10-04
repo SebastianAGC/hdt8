@@ -1,3 +1,5 @@
+//Código tomado de Blacboard
+
 public interface PriorityQueue<E extends Comparable<E>>
 {
 	public E getFirst();

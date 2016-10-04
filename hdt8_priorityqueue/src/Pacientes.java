@@ -7,14 +7,16 @@
 
 /**
  *
- * @author Sebastian Galindo
+ * @author Sebastian Galindo, Davis Alvarez
  */
 public class Pacientes implements Comparable<Pacientes>{
     
+    /*Variables que llenan la ficha del paciente*/
     private String name;
     private String sintoma;
     private String codigo;
 
+    /*Método constructor*/
     public Pacientes(String name, String sintoma, String codigo) {
         this.name = name;
         this.sintoma = sintoma;
@@ -27,6 +29,7 @@ public class Pacientes implements Comparable<Pacientes>{
 		// TODO Auto-generated constructor stub
 	}
 
+    //Métodos set de los atributos del paciente
 	public void setName(String name) {
         this.name = name;
     }
@@ -39,6 +42,7 @@ public class Pacientes implements Comparable<Pacientes>{
         this.codigo = codigo;
     }
 
+    //Métodos get de los atributos del paciente
     public String getName() {
         return name;
     }
@@ -51,11 +55,13 @@ public class Pacientes implements Comparable<Pacientes>{
         return codigo;
     }
 
+    /*Método toString que no sdevuelve una cadena con los deatos del paciente*/
     @Override
     public String toString() {
         return name + ", " + sintoma + ", " + codigo;
     }
 
+    /*Metodo CompareTo que compara los codigos de los pacientes*/
     @Override
     public int compareTo(Pacientes o) {
         return this.codigo.compareTo(o.codigo);

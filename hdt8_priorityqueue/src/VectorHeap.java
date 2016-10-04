@@ -1,3 +1,6 @@
+//Código tomado de http://www.cs.pomona.edu/classes/cs062/structure5/VectorHeap.java
+
+
 // An implementation of a priority queue in a vector.
 // (c) 1998, 2001, 2002 duane a. bailey
 
@@ -50,7 +53,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Construct a new priority queue
      *
-     * @post constructs a new priority queue
      */
     public VectorHeap()
     {
@@ -60,7 +62,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Construct a new priority queue from an unordered vector
      *
-     * @post constructs a new priority queue from an unordered vector
      */
     public VectorHeap(Vector<E> v)
     {
@@ -76,8 +77,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
      * Returns parent index
      * @param i a node index
      * @return parent of node at i
-     * @pre 0 <= i < size
-     * @post returns parent of node at location i
      */
     protected static int parent(int i)
     {
@@ -88,8 +87,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
      * Returns left child index.
      * @param i a node index
      * @return left child of node at i
-     * @pre 0 <= i < size
-     * @post returns index of left child of node at location i
      */
     protected static int left(int i)
     {
@@ -100,8 +97,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
      * Returns right child index.
      * @param i a node index
      * @return right child of node at i
-     * @pre 0 <= i < size
-     * @post returns index of right child of node at location i
      */
     protected static int right(int i)
     {
@@ -110,10 +105,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
     /**
      * Fetch lowest valued (highest priority) item from queue.
-     *
-     * @pre !isEmpty()
-     * @post returns the minimum value in priority queue
-     * 
      * @return The smallest value from queue.
      */
     public E getFirst()
@@ -124,8 +115,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Returns the minimum value from the queue.
      *
-     * @pre !isEmpty()
-     * @post returns and removes minimum value from queue
      * 
      * @return The minimum value in the queue.
      */
@@ -141,8 +130,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Add a value to the priority queue.
      *
-     * @pre value is non-null comparable
-     * @post value is added to priority queue
      * 
      * @param value The value to be added.
      */
@@ -155,7 +142,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Determine if the queue is empty.
      *
-     * @post returns true iff no elements are in queue
      * 
      * @return True if the queue is empty.
      */
@@ -167,8 +153,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Moves node upward to appropriate position within heap.
      * @param leaf Index of the node in the heap.
-     * @pre 0 <= leaf < size
-     * @post moves node at index leaf up to appropriate position
      */
     protected void percolateUp(int leaf)
     {
@@ -187,8 +171,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Moves node downward, into appropriate position within subheap.
      * @param root Index of the root of the subheap.
-     * @pre 0 <= root < size
-     * @post moves node at index root down 
      *   to appropriate position in subtree
      */
     protected void pushDownRoot(int root)
@@ -224,8 +206,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
     /**
      * Determine the size of the queue.
-     *
-     * @post returns number of elements within queue
      * 
      * @return The number of elements within the queue.
      */
@@ -237,7 +217,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Remove all the elements from the queue.
      *
-     * @post removes all elements from queue
      */
     public void clear()
     {
@@ -247,7 +226,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
     /**
      * Construct a string representation of the heap.
      *
-     * @post returns string representation of heap
      * 
      * @return The string representing the heap.
      */
