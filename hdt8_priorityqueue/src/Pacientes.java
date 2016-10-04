@@ -1,3 +1,5 @@
+package org.uvg.bean;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,8 +21,14 @@ public class Pacientes implements Comparable<Pacientes>{
         this.sintoma = sintoma;
         this.codigo = codigo;
     }
+    
 
-    public void setName(String name) {
+    public Pacientes() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public void setName(String name) {
         this.name = name;
     }
 
