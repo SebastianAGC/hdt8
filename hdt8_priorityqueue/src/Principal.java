@@ -14,6 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
 public class Principal {
 
     static ArrayList<Pacientes> arrayPacientes = new ArrayList<Pacientes>();
@@ -51,6 +52,7 @@ public class Principal {
     
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
                 crearArray();
 
                 System.out.println("Los pacientes ingresaron de esta manera: ");
